@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baseball Form</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+    <header class="data">
+        <h1>Baseball Data Collection</h1>
+        <div>
+            <img src="images/ncaa.jpg" height="150" width="150" alt="image">
+            <img src="images/al.gif" height="150" width="150" alt="image">
+            <img src="images/mlb.jpg" height="150" width="150" alt="image">
+            <img src="images/nl.gif" height="150" width="150" alt="image">
+            <img src="images/frontier league.jpg" height="150" width="150" alt="image">
+            <img src="images/Highschool.jpg" height="150" width="150" alt="image">
+        </div>
+    </header>
+    <section>
+<h2>Select Pitching or Batting:</h2>
+<select id="selection" onchange="toggleForm()">
+    <option value="">Select...</option>
+    <option value="batting">Batting</option>
+    <option value="pitching">Pitching</option>
+</select>
+<section>
+<div id="battingForm" class="hidden">
+    <nav id="hamnav">
+        <div id="hamitems">
+    <div class="aaa">
+    <h3>Batting Form</h3>
+    
+    <form id="baseballForm">
+        <table>
+            <tr>
+                <td>
+                    <div class="date">
+                        <label for="date">Date:</label> 
+                        <input type="text" id="date" name="date" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="name">
+                        <label for="name">Name:</label> 
+                        <input type="text" id="name" name="name" required> 
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="team">
+                        <label for="team">Team:</label> 
+                        <input type="text" id="team" name="team" required>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="position"> 
+                        <label for="position">Position:</label> 
+                        <input type="text" id="position" name="position" required> 
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="atbat">
+                        <label for="atbat">At Bat:</label> 
+                        <input type="number" id="atbat" name="atbat" required> 
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="hitOut">
+                        <label for="hitOrOut">Pick:</label> 
+                        <select id="hitOrOut" name="hitOrOut" required>
+                            <option value="">Select an option</option>
+                            <option value="flyout">Fly Out</option>
+                            <option value="groundout">Ground Out</option>
+                            <option value="hit">Hit</option>
+                            <option value="strike">Strike Out</option>
+                            <option value="thrownout">Thrown Out</option>
+                            <option value="walk">Walk</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="text-align: center;">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</div>
+</div>
+</nav>
+</div>
+<div id="pitchingForm" class="hidden">
+    <nav id="hamnav">
+        <div id="hamitems">
+    <div class="aaa">
+    <h3>Pitching Form</h3>
+    <div class="name"><form id="baseballForm">
+        <table>
+            <tr>
+                <th><label for="name">Name:</label></th>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <th><label for="team">Team:</label></th>
+                <td><input type="text" id="team" name="team" required></td>
+            </tr>
+            <tr>
+                <th><label for="hits">Hits:</label></th>
+                <td><input type="number" id="hits" name="hits" required></td>
+            </tr>
+            <tr>
+                <th><label for="balls">Balls:</label></th>
+                <td><input type="number" id="balls" name="balls" required></td>
+            </tr>
+            <tr>
+                <th><label for="inningsPitched">Innings Pitched:</label></th>
+                <td><input type="number" id="inningsPitched" name="inningsPitched" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</div>
+</div>
+</nav>
+</div>
+</section>
+<footer>
+        <h2>Contact Information</h2>
+        <a href="mailto:mhollrah0001@gmail.com" subject="subject text" rel="email">E-Mail</a>
+        <a href="htpps://www.facebook.com/mark.hollrah.7" target=text rel="facebook">Facebook</a>
+        <a href="htpps://github.com/Myfithub12/Project.git" target=text rel="github">Github</a>
+        <a href="htpps://www.linkedin.com/mark-hollrah" target=text rel="linkedin">Linkedin</a>
+        <p>&copy; &trade; 2024 A Mark Hollrah Production</p>
+</footer>
+<script src="/script/batting.js"></script>
+<script src="/script/pitching.js"></script>
+<script src="/script/index.js"></script>
+</body>
+</html>
