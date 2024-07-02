@@ -8,11 +8,34 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="index.css">
+<link rel="stylesheet" type="text/css" href="login.css">
 </head>
 <body>
+    <section>
     <header class="data">
         <h1>Baseball Data Collection</h1>
+        <div id="battingForm" class="hidden">
         <div>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p id="message"></p>
+        </div>
+        <h2>Not a member? Create an Account</h2>
+        <div id="battingForm" class="hidden"></div>
+        <form action="submit_form.php" method="post" onsubmit="return validateForm()">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+    
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+    
+            <input type="submit" value="Create Account">
+    </form>
+            </div>
             <img src="images/ncaa.jpg" height="150" width="150" alt="image">
             <img src="images/al.gif" height="150" width="150" alt="image">
             <img src="images/mlb.jpg" height="150" width="150" alt="image">
@@ -153,6 +176,7 @@
         <a href="htpps://www.linkedin.com/mark-hollrah" target=text rel="linkedin">Linkedin</a>
         <p>&copy; &trade; 2024 A Mark Hollrah Production</p>
 </footer>
+<script src="/script/login.js"></script>
 <script src="/script/batting.js"></script>
 <script src="/script/pitching.js"></script>
 <script src="/script/index.js"></script>
