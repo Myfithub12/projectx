@@ -75,8 +75,8 @@ function toggleForm() {
 function toggleForm() {
     var selection = document.getElementById("selection").value;
     if (selection === "batting") {
-        window.location.href = "batting.html";
+        window.location.href = "/html/batting.html";
     } else if (selection === "pitching") {
-        window.location.href = "pitching.html";
+        window.location.href = "/html/pitching.html";
     }
 }
