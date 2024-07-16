@@ -59,16 +59,44 @@
                                     <tr>
                                         <td>
                                             <div class="hitOut">
-                                                <label for="hitOrOut">Pick:</label> 
-                                                <select id="hitOrOut" name="hitOrOut" required>
-                                                    <option value="">Select an option</option>
-                                                    <option value="flyout">Fly Out</option>
-                                                    <option value="groundout">Ground Out</option>
-                                                    <option value="hit">Hit</option>
-                                                    <option value="strike">Strike Out</option>
-                                                    <option value="thrownout">Thrown Out</option>
-                                                    <option value="walk">Walk</option>
-                                                </select>
+                                                <form id="batting-form">
+                                                    <label>
+                                                        <input type="checkbox" name="hit"> Hit
+                                                    </label><br>
+                                                    <label>
+                                                        <input type="checkbox" name="walk"> Walk
+                                                    </label><br>
+                                                    <label>
+                                                        <input type="checkbox" name="plain-old-out"> Plain-Old Out (Strikeout, Groundout, Flyout, Popout)
+                                                    </label><br>
+                                                    <label>
+                                                        <input type="checkbox" name="sacraficebunt"> Sacrafice Bunt
+                                                    </label><br>
+                                                    <label>
+                                                        <input type="checkbox" name="Sacraficefly"> Sacrafice Fly
+                                                    </label><br>
+                                                    <label>
+                                                        <input type="checkbox" name="fielders-choice"> Fielder's Choice
+                                                    </label><br>
+                                                    <label>
+                                                        <input type="checkbox" name="reach-on-error"> Reach on Error
+                                                    </label><br>
+                                                    <label>
+                                                        <input type="checkbox" name="dropped-strike"> Dropped Strike
+                                                    </label><br>
+                                                    <label>
+                                                        <input type="checkbox" name="defensiveinterference"> Defensive Interference
+                                                    </label><br>
+                                            
+                                                    <label>
+                                                        Total At-Bats:
+                                                        <input type="number" id="total-at-bats" value="0">
+                                                    </label><br>
+                                            
+                                                    <button type="button" onclick="calculateBattingAverage()">Calculate Batting Average</button>
+                                                </form>
+                                            
+                                                <p>Batting Average: <span id="batting-average">-</span></p>
                                             </div>
                                         </td>
                                     </tr>
