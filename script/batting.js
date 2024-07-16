@@ -28,8 +28,6 @@ function saveFormData() {
         name: document.getElementById('date').value,
         name: document.getElementById('name').value,
         team: document.getElementById('team').value,
-        position: document.getElementById('position').value,
-        atbat: document.getElementById('atbat').value,
         hitOrOut: document.getElementById('hitOrOut').value
     };
 
@@ -45,8 +43,6 @@ window.onload = function() {
         document.getElementById('date').value = formData.name;
         document.getElementById('name').value = formData.name;
         document.getElementById('team').value = formData.team;
-        document.getElementById('position').value = formData.position;
-        document.getElementById('atbat').value = formData.atbat;
         document.getElementById('hitOrOut').value = formData.hitOrOut;
     }
 };
