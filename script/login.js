@@ -59,3 +59,35 @@ document.getElementById('signup-form').addEventListener('submit', function(event
         console.error('Error:', error);
     });
 });
+
+// Function to toggle visibility based on login status
+function toggleLoginVisibility(isLoggedIn) {
+    const loginContainer = document.getElementById('login-container');
+    const selectionContainer = document.getElementById('selection-container');
+
+    if (isLoggedIn) {
+        loginContainer.classList.add('hidden');
+        selectionContainer.classList.remove('hidden');
+    } else {
+        loginContainer.classList.remove('hidden');
+        selectionContainer.classList.add('hidden');
+    }
+}
+
+// Example: Check if user is logged in (replace with your actual logic)
+const isLoggedIn = false; // Replace with your actual login check logic
+
+// Initially hide the selection container
+toggleLoginVisibility(isLoggedIn);
+
+// Function to toggle form visibility based on selection
+function toggleForm() {
+    const selection = document.getElementById('selection').value;
+
+    // Example: Show different forms based on selection (replace with your actual logic)
+    if (selection === 'batting') {
+        console.log('Display Batting form');
+    } else if (selection === 'pitching') {
+        console.log('Display Pitching form');
+    }
+}
