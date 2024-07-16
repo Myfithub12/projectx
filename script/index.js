@@ -71,3 +71,12 @@ function toggleForm() {
         document.getElementById("pitchingForm").classList.add("hidden");
     }
 }
+
+function toggleForm() {
+    var selection = document.getElementById("selection").value;
+    if (selection === "batting") {
+        window.location.href = "batting.html";
+    } else if (selection === "pitching") {
+        window.location.href = "pitching.html";
+    }
+}
