@@ -7,12 +7,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="/style/index.css">
+    <link rel="stylesheet" type="text/css" href="/style/login.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <section>
         <header class="data">
+    <div id="login-container" class="hidden">
+        <h2>Login to continue</h2>
+    </div>
             <h1><a href="loginpage.html">Log In</a></h1>
             <h2>Baseball Data Collection</h2>
             <div>
@@ -24,7 +32,8 @@
                 <img src="images/Highschool.jpg" height="150" width="150" alt="image">
                 <link rel="stylesheet" type="text/css" href="/style/index.css">
             </div>
-        </header><section>
+        </header>
+        <section>
             <h2>Select Pitching or Batting:</h2>
             <select id="selection" onchange="toggleForm()">
                 <option value="">Select...</option>
