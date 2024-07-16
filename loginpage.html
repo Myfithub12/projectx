@@ -10,32 +10,27 @@
     <link rel="stylesheet" type="text/css" href="/style/login.css">
 </head>
 <body>
-    <section>
-        <div class="login-container">
-            <h2>Login Form</h2>
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="login()">Login</button>
-            <p id="message"></p>
-        </div>
-        <h2>Not a member? Create an Account</h2>
-        <div id="battingForm" class="hidden"></div>
-        <form action="submit_form.php" method="post">
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br><br>
-
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" required><br><br>
-
-            <input type="submit" value="Create Account">
+            <button type="submit">Login</button>
         </form>
-        <div>
-            <a href="index.html">Return to Home</a>
-        </div>
+        <hr>
+        <h2>Create New Member</h2>
+        <form id="signup-form">
+            <label for="new-username">New Username:</label><br>
+            <input type="text" id="new-username" name="new-username" required><br><br>
+            <label for="new-password">New Password:</label><br>
+            <input type="password" id="new-password" name="new-password" required><br><br>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
     </section>
     <script src="/script/login.js"></script>
+    <script src="/script/server.js"></script>
 </body>
 </html>

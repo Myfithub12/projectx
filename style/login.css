@@ -26,20 +26,29 @@ button {
     cursor: pointer;
 }
 
-<script>
-function validateForm() {
-    var username = document.getElementById("username").value;
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("password").value;
-
-    // Perform validation
-    if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
-        alert("Please fill out all fields.");
-        return false;
-    }
-
-    // You can add more validation for email format, password strength, etc.
-
-    return true;
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
-</script>
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
