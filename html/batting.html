@@ -25,6 +25,15 @@
             <h2><a href="/index.html">Home Page</a></h2>
         </header>
         <section>
+            <h2>Open CSV File</h2>
+            <input type="file" id="fileInput" accept=".csv">
+            <div id="appSelection" style="display: none;">
+                <h2>Select Application</h2>
+                <button onclick="setApp('app1')">App 1</button>
+                <button onclick="setApp('app2')">App 2</button>
+                <button onclick="setApp('app3')">App 3</button>
+            </div>
+        </select>
             <div>
                 <nav id="hamnav">
                     <div id="hamitems">
@@ -61,7 +70,11 @@
                                             <div class="hitOut">
                                                 <form id="batting-form">
                                                     <label>
-                                                        <input type="checkbox" name="hit"> Hit
+                                                        <input type="checkbox" name="hit"> Hit 
+                                                        <div>
+                                                            <label for="numberInput">Enter a number:</label>
+                                                            <input type="number" id="numberInput" name="numberInput" required>
+                                                        </div>
                                                     </label><br>
                                                     <label>
                                                         <input type="checkbox" name="walk"> Walk
@@ -92,11 +105,6 @@
                                                         Total At-Bats:
                                                         <input type="number" id="total-at-bats" value="0">
                                                     </label><br>
-                                            
-                                                    <button type="button" onclick="calculateBattingAverage()">Calculate  Batting Average</button>
-                                                </form>
-                                            
-                                                <p>Batting Average: <span id="batting-average">-</span></p>
                                             </div>
                                         </td>
                                     </tr>
@@ -116,5 +124,7 @@
             <p>&copy; &trade; 2024 A Hollrah Production</p>
         </footer>
         <script src="/script/batting.js"></script>
+        <script src="/script/number.js"></script>
+        <script src="/script/server.js"></script>
     </body>
 </html>
